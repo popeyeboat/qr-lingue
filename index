@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Scegli la lingua</title>
+  <style>
+    body { 
+      font-family: sans-serif; 
+      padding: 20px; 
+      text-align: center; 
+      background: #f2f2f2;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    a { 
+      display: inline-block; 
+      margin: 10px; 
+      padding: 12px 20px; 
+      font-size: 1.2rem; 
+      text-decoration: none; 
+      background: white; 
+      border-radius: 8px; 
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+  <h1>Scegli la lingua</h1>
+  <p>Oppure attendi un secondo per il reindirizzamento automatico.</p>
+
+  <!-- Qui aggiungi i tuoi link ai PDF -->
+  <a href="LINK_PDF_IT">🇮🇹 Italiano</a>
+  <a href="LINK_PDF_EN">🇬🇧 English</a>
+  <a href="LINK_PDF_FR">🇫🇷 Français</a>
+  <a href="LINK_PDF_DE">🇩🇪 Deutsch</a>
+
+  <script>
+    // Mappa lingua → PDF
+    const pdfLinks = {
+      'it': 'LINK_PDF_IT',
+      'en': 'LINK_PDF_EN',
+      'fr': 'LINK_PDF_FR',
+      'de': 'LINK_PDF_DE'
+    };
+
+    // Lingua del browser (es: "it-IT" → "it")
+    const lang = (navigator.language || navigator.userLanguage || 'en').slice(0,2);
+
+    // Reindirizza automaticamente dopo 1 secondo
+    setTimeout(() => {
+      if (pdfLinks[lang]) {
+        window.location.href = pdfLinks[lang];
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
