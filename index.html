@@ -11,7 +11,7 @@
       background: #f5f5f5;
     }
     h1 {
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
     a { 
       display: inline-block; 
@@ -28,50 +28,13 @@
 </head>
 <body>
   <h1>Scegli la lingua</h1>
-  <p>
-    Verrai reindirizzato automaticamente al PDF della tua lingua.<br>
-    <strong><a href="#" id="cancelRedirect">Clicca qui per scegliere manualmente la lingua</a></strong>
-  </p>
+  <p>Seleziona la versione del documento che vuoi visualizzare:</p>
 
-  <!-- Pulsanti lingue (inizialmente nascosti) -->
-  <div id="languageButtons" style="display:none;">
-    <a href="https://popeyeboat.github.io/qr-lingue/Un%20Viaggio%20sul%20Mare%20della%20Maremma.pdf">🇮🇹 Italiano</a>
-    <a href="https://popeyeboat.github.io/qr-lingue/Journey_Maremma_EN.pdf">🇬🇧 English</a>
-    <a href="https://popeyeboat.github.io/qr-lingue/Voyage_Maremme_FR.pdf">🇫🇷 Français</a>
-    <a href="https://popeyeboat.github.io/qr-lingue/Reise_Maremma_DE.pdf">🇩🇪 Deutsch</a>
-  </div>
+  <!-- Pulsanti lingue -->
+  <a href="https://popeyeboat.github.io/qr-lingue/Un%20Viaggio%20sur%20Mare%20della%20Maremma.pdf">🇮🇹 Italiano</a>
+  <a href="https://popeyeboat.github.io/qr-lingue/Journey_Maremma_EN.pdf">🇬🇧 English</a>
+  <a href="https://popeyeboat.github.io/qr-lingue/Voyage_Maremme_FR.pdf">🇫🇷 Français</a>
+  <a href="https://popeyeboat.github.io/qr-lingue/Reise_Maremma_DE.pdf">🇩🇪 Deutsch</a>
 
-  <script>
-    // Link per ogni lingua
-    const pdfLinks = {
-      'it': 'https://popeyeboat.github.io/qr-lingue/Un%20Viaggio%20sul%20Mare%20della%20Maremma.pdf',
-      'en': 'https://popeyeboat.github.io/qr-lingue/Journey_Maremma_EN.pdf',
-      'fr': 'https://popeyeboat.github.io/qr-lingue/Voyage_Maremme_FR.pdf',
-      'de': 'https://popeyeboat.github.io/qr-lingue/Reise_Maremma_DE.pdf'
-    };
-
-    // Lingua del browser (es. "it-IT" → "it")
-    const lang = (navigator.language || navigator.userLanguage || 'en').slice(0,2);
-
-    let redirectTimeout = null;
-
-    function startRedirect() {
-      if (pdfLinks[lang]) {
-        redirectTimeout = setTimeout(() => {
-          window.location.href = pdfLinks[lang];
-        }, 1200); // Attendi 1.2s per dare tempo a cliccare "cambia lingua"
-      }
-    }
-
-    // Avvia il redirect
-    startRedirect();
-
-    // Blocca il redirect e mostra i pulsanti lingua
-    document.getElementById("cancelRedirect").onclick = function() {
-      clearTimeout(redirectTimeout);
-      document.getElementById("languageButtons").style.display = "block";
-      return false;
-    };
-  </script>
 </body>
 </html>
