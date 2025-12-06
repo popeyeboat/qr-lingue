@@ -3,38 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <title>Scegli la lingua</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body { 
-      font-family: sans-serif; 
-      padding: 30px; 
-      text-align: center; 
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; 
+      margin: 0;
+      padding: 0;
       background: #f5f5f5;
+      color: #222;
     }
+
+    .container {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 200px;
+      width: 60%;
+      height: auto;
+      margin: 0 auto 16px;
+      display: block;
+    }
+
     h1 {
-      margin-bottom: 15px;
+      font-size: 1.6rem;
+      margin: 8px 0 4px;
     }
-    a { 
+
+    p {
+      font-size: 1rem;
+      margin: 4px 0 20px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .btn-lang { 
       display: inline-block; 
-      margin: 10px; 
-      padding: 12px 20px; 
-      font-size: 1.2rem; 
+      padding: 14px 18px; 
+      font-size: 1.1rem; 
       text-decoration: none; 
-      background: white; 
-      border-radius: 8px; 
-      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-      color: black;
+      background: #ffffff; 
+      border-radius: 999px; 
+      box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+      color: #222;
+      text-align: center;
+    }
+
+    .flag {
+      margin-right: 8px;
+    }
+
+    @media (min-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      .btn-lang {
+        font-size: 1.15rem;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Scegli la lingua</h1>
-  <p>Seleziona la versione del documento che vuoi visualizzare:</p>
+  <div class="container">
+    <!-- LOGO: sostituisci "logo.png" con il nome reale del tuo file -->
+    <img src="logo.png" alt="Logo azienda" class="logo">
 
-  <!-- Pulsanti lingue -->
-  <a href="https://popeyeboat.github.io/qr-lingue/Un%20Viaggio%20sur%20Mare%20della%20Maremma.pdf">🇮🇹 Italiano</a>
-  <a href="https://popeyeboat.github.io/qr-lingue/Journey_Maremma_EN.pdf">🇬🇧 English</a>
-  <a href="https://popeyeboat.github.io/qr-lingue/Voyage_Maremme_FR.pdf">🇫🇷 Français</a>
-  <a href="https://popeyeboat.github.io/qr-lingue/Reise_Maremma_DE.pdf">🇩🇪 Deutsch</a>
+    <h1>Scegli la lingua</h1>
+    <p>Seleziona la versione del documento che vuoi visualizzare:</p>
 
+    <div class="buttons">
+      <a class="btn-lang" href="https://popeyeboat.github.io/qr-lingue/Un%20Viaggio%20sul%20Mare%20della%20Maremma.pdf">
+        <span class="flag">🇮🇹</span> Italiano
+      </a>
+      <a class="btn-lang" href="https://popeyeboat.github.io/qr-lingue/Journey_Maremma_EN.pdf">
+        <span class="flag">🇬🇧</span> English
+      </a>
+      <a class="btn-lang" href="https://popeyeboat.github.io/qr-lingue/Voyage_Maremme_FR.pdf">
+        <span class="flag">🇫🇷</span> Français
+      </a>
+      <a class="btn-lang" href="https://popeyeboat.github.io/qr-lingue/Reise_Maremma_DE.pdf">
+        <span class="flag">🇩🇪</span> Deutsch
+      </a>
+    </div>
+  </div>
 </body>
 </html>
