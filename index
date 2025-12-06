@@ -30,10 +30,14 @@
   <p>Oppure attendi un secondo per il reindirizzamento automatico.</p>
 
   <!-- Qui aggiungi i tuoi link ai PDF -->
-  <a href="Un Viaggio sul Mare della Maremma.pdf">🇮🇹 Italiano</a>
-  <a href="Journey_Maremma_EN.pdf">🇬🇧 English</a>
-  <a href="Voyage_Maremme_FR.pdf">🇫🇷 Français</a>
-  <a href="Reise_Maremma_DE.pdf">🇩🇪 Deutsch</a>
+  <a href="https://popeyeboat.github.io/qr-lingue/Un%20Viaggio%20sul%20Mare%20della%20Maremma.pdf
+">🇮🇹 Italiano</a>
+  <a href="https://popeyeboat.github.io/qr-lingue/Journey_Maremma_EN.pdf
+">🇬🇧 English</a>
+  <a href="https://popeyeboat.github.io/qr-lingue/Voyage_Maremme_FR.pdf
+">🇫🇷 Français</a>
+  <a href="https://popeyeboat.github.io/qr-lingue/Reise_Maremma_DE.pdf
+">🇩🇪 Deutsch</a>
 
   <script>
     // Mappa lingua → PDF
