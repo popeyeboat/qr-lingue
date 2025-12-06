@@ -6,9 +6,9 @@
   <style>
     body { 
       font-family: sans-serif; 
-      padding: 20px; 
+      padding: 30px; 
       text-align: center; 
-      background: #f2f2f2;
+      background: #f5f5f5;
     }
     h1 {
       margin-bottom: 10px;
@@ -22,6 +22,7 @@
       background: white; 
       border-radius: 8px; 
       box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+      color: black;
     }
   </style>
 </head>
@@ -29,29 +30,25 @@
   <h1>Scegli la lingua</h1>
   <p>Oppure attendi un secondo per il reindirizzamento automatico.</p>
 
-  <!-- Qui aggiungi i tuoi link ai PDF -->
-  <a href="https://popeyeboat.github.io/qr-lingue/Un%20Viaggio%20sul%20Mare%20della%20Maremma.pdf
-">🇮🇹 Italiano</a>
-  <a href="https://popeyeboat.github.io/qr-lingue/Journey_Maremma_EN.pdf
-">🇬🇧 English</a>
-  <a href="https://popeyeboat.github.io/qr-lingue/Voyage_Maremme_FR.pdf
-">🇫🇷 Français</a>
-  <a href="https://popeyeboat.github.io/qr-lingue/Reise_Maremma_DE.pdf
-">🇩🇪 Deutsch</a>
+  <!-- Pulsanti lingue -->
+  <a href="https://popeyeboat.github.io/qr-lingue/Un%20Viaggio%20sul%20Mare%20della%20Maremma.pdf">🇮🇹 Italiano</a>
+  <a href="https://popeyeboat.github.io/qr-lingue/Journey_Maremma_EN.pdf">🇬🇧 English</a>
+  <a href="https://popeyeboat.github.io/qr-lingue/Voyage_Maremme_FR.pdf">🇫🇷 Français</a>
+  <a href="https://popeyeboat.github.io/qr-lingue/Reise_Maremma_DE.pdf">🇩🇪 Deutsch</a>
 
   <script>
-    // Mappa lingua → PDF
+    // Mappa delle lingue → PDF
     const pdfLinks = {
-      'it': 'LINK_PDF_IT',
-      'en': 'LINK_PDF_EN',
-      'fr': 'LINK_PDF_FR',
-      'de': 'LINK_PDF_DE'
+      'it': 'https://popeyeboat.github.io/qr-lingue/Un%20Viaggio%20sul%20Mare%20della%20Maremma.pdf',
+      'en': 'https://popeyeboat.github.io/qr-lingue/Journey_Maremma_EN.pdf',
+      'fr': 'https://popeyeboat.github.io/qr-lingue/Voyage_Maremme_FR.pdf',
+      'de': 'https://popeyeboat.github.io/qr-lingue/Reise_Maremma_DE.pdf'
     };
 
-    // Lingua del browser (es: "it-IT" → "it")
+    // Prende la lingua del browser (es. "it-IT" → "it")
     const lang = (navigator.language || navigator.userLanguage || 'en').slice(0,2);
 
-    // Reindirizza automaticamente dopo 1 secondo
+    // Reindirizza automaticamente se la lingua è supportata
     setTimeout(() => {
       if (pdfLinks[lang]) {
         window.location.href = pdfLinks[lang];
