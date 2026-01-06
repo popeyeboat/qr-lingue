@@ -14,15 +14,13 @@
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; 
       margin: 0;
       padding: 0;
-      /* SFONDO: usa il nome del file che hai caricato (es. sfondo.png) */
       background: #000 url("sfondo.png") no-repeat center center fixed;
       background-size: cover;
     }
 
     .overlay {
-      /* leggera velatura per rendere leggibile il testo sopra lo sfondo */
       min-height: 100vh;
-      background: rgba(0, 0, 0, 0.10);
+      background: rgba(0, 0, 0, 0.10);   /* ← puoi mettere anche: none */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -33,13 +31,13 @@
       max-width: 480px;
       width: 100%;
       margin: 0 auto;
-      padding: 24px 18px 32px;
+      padding: 26px 20px 34px;
       text-align: center;
-      background: rgba(255, 255, 255, 0.94);
+      background: rgba(255, 255, 255, 0.95);
       border-radius: 18px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.25);
     }
-    
+
     .logo {
       max-width: 180px;
       width: 55%;
@@ -52,16 +50,15 @@
       display: block;
     }
 
-
     h1 {
       font-size: 1.6rem;
-      margin: 4px 0 6px;
+      margin: 6px 0 8px;
       color: #222;
     }
 
     p {
-      font-size: 0.98rem;
-      margin: 4px 0 18px;
+      font-size: 1rem;
+      margin: 2px 0 20px;
       color: #444;
     }
 
@@ -86,31 +83,19 @@
 
     .btn-lang:active {
       transform: scale(0.98);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.28);
     }
 
     .flag {
       margin-right: 8px;
-    }
-
-    @media (min-width: 600px) {
-      h1 {
-        font-size: 1.8rem;
-      }
-      .btn-lang {
-        font-size: 1.15rem;
-      }
-      .container {
-        padding: 28px 26px 36px;
-      }
     }
   </style>
 </head>
 <body>
   <div class="overlay">
     <div class="container">
-      <!-- LOGO: sostituisci "logo.png" se il file ha un altro nome -->
-      <!-- Se vuoi che il click sul logo apra il PDF del logo, avvolgi l'immagine in un <a href="logo.pdf" target="_blank"> -->
+
+      <!-- LOGO (jpeg va benissimo 👍) -->
       <img src="logo.jpeg" alt="Logo azienda" class="logo">
 
       <h1>Scegli la lingua</h1>
@@ -120,12 +105,15 @@
         <a class="btn-lang" href="https://popeyeboat.github.io/qr-lingue/Un%20Viaggio%20sul%20Mare%20della%20Maremma.pdf">
           <span class="flag">🇮🇹</span> Italiano
         </a>
+
         <a class="btn-lang" href="https://popeyeboat.github.io/qr-lingue/Journey_Maremma_EN.pdf">
           <span class="flag">🇬🇧</span> English
         </a>
+
         <a class="btn-lang" href="https://popeyeboat.github.io/qr-lingue/Voyage_Maremme_FR.pdf">
           <span class="flag">🇫🇷</span> Français
         </a>
+
         <a class="btn-lang" href="https://popeyeboat.github.io/qr-lingue/Reise_Maremma_DE.pdf">
           <span class="flag">🇩🇪</span> Deutsch
         </a>
