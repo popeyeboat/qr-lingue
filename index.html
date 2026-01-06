@@ -22,7 +22,7 @@
     .overlay {
       /* leggera velatura per rendere leggibile il testo sopra lo sfondo */
       min-height: 100vh;
-      background: rgba(0, 0, 0, 0.35);
+      background: rgba(0, 0, 0, 0.10);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -39,14 +39,19 @@
       border-radius: 18px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.25);
     }
-
+    
     .logo {
       max-width: 180px;
-      width: 60%;
-      height: auto;
+      width: 55%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
       margin: 0 auto 14px;
       display: block;
     }
+
 
     h1 {
       font-size: 1.6rem;
