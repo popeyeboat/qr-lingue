@@ -14,33 +14,50 @@
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; 
       margin: 0;
       padding: 0;
-      background: #f5f5f5;
-      color: #222;
+      /* SFONDO: usa il nome del file che hai caricato (es. sfondo.png) */
+      background: #000 url("sfondo.png") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .overlay {
+      /* leggera velatura per rendere leggibile il testo sopra lo sfondo */
+      min-height: 100vh;
+      background: rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
     }
 
     .container {
       max-width: 480px;
+      width: 100%;
       margin: 0 auto;
-      padding: 24px 16px 40px;
+      padding: 24px 18px 32px;
       text-align: center;
+      background: rgba(255, 255, 255, 0.94);
+      border-radius: 18px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
     }
 
     .logo {
-      max-width: 200px;
+      max-width: 180px;
       width: 60%;
       height: auto;
-      margin: 0 auto 16px;
+      margin: 0 auto 14px;
       display: block;
     }
 
     h1 {
       font-size: 1.6rem;
-      margin: 8px 0 4px;
+      margin: 4px 0 6px;
+      color: #222;
     }
 
     p {
-      font-size: 1rem;
-      margin: 4px 0 20px;
+      font-size: 0.98rem;
+      margin: 4px 0 18px;
+      color: #444;
     }
 
     .buttons {
@@ -57,9 +74,14 @@
       text-decoration: none; 
       background: #ffffff; 
       border-radius: 999px; 
-      box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.18);
       color: #222;
       text-align: center;
+    }
+
+    .btn-lang:active {
+      transform: scale(0.98);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.25);
     }
 
     .flag {
@@ -73,30 +95,36 @@
       .btn-lang {
         font-size: 1.15rem;
       }
+      .container {
+        padding: 28px 26px 36px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- LOGO: sostituisci "logo.png" con il nome reale del tuo file -->
-    <img src="logo.png" alt="Logo azienda" class="logo">
+  <div class="overlay">
+    <div class="container">
+      <!-- LOGO: sostituisci "logo.png" se il file ha un altro nome -->
+      <!-- Se vuoi che il click sul logo apra il PDF del logo, avvolgi l'immagine in un <a href="logo.pdf" target="_blank"> -->
+      <img src="logo.jpeg" alt="Logo azienda" class="logo">
 
-    <h1>Scegli la lingua</h1>
-    <p>Seleziona la versione del documento che vuoi visualizzare:</p>
+      <h1>Scegli la lingua</h1>
+      <p>Seleziona la versione del documento che vuoi visualizzare:</p>
 
-    <div class="buttons">
-      <a class="btn-lang" href="https://popeyeboat.github.io/qr-lingue/Un%20Viaggio%20sul%20Mare%20della%20Maremma.pdf">
-        <span class="flag">🇮🇹</span> Italiano
-      </a>
-      <a class="btn-lang" href="https://popeyeboat.github.io/qr-lingue/Journey_Maremma_EN.pdf">
-        <span class="flag">🇬🇧</span> English
-      </a>
-      <a class="btn-lang" href="https://popeyeboat.github.io/qr-lingue/Voyage_Maremme_FR.pdf">
-        <span class="flag">🇫🇷</span> Français
-      </a>
-      <a class="btn-lang" href="https://popeyeboat.github.io/qr-lingue/Reise_Maremma_DE.pdf">
-        <span class="flag">🇩🇪</span> Deutsch
-      </a>
+      <div class="buttons">
+        <a class="btn-lang" href="https://popeyeboat.github.io/qr-lingue/Un%20Viaggio%20sul%20Mare%20della%20Maremma.pdf">
+          <span class="flag">🇮🇹</span> Italiano
+        </a>
+        <a class="btn-lang" href="https://popeyeboat.github.io/qr-lingue/Journey_Maremma_EN.pdf">
+          <span class="flag">🇬🇧</span> English
+        </a>
+        <a class="btn-lang" href="https://popeyeboat.github.io/qr-lingue/Voyage_Maremme_FR.pdf">
+          <span class="flag">🇫🇷</span> Français
+        </a>
+        <a class="btn-lang" href="https://popeyeboat.github.io/qr-lingue/Reise_Maremma_DE.pdf">
+          <span class="flag">🇩🇪</span> Deutsch
+        </a>
+      </div>
     </div>
   </div>
 </body>
